@@ -17,7 +17,7 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const paperId = import.meta.env.VITE_PAPER_CLIENT_ID;
-console.log(import.meta.env)
+
 root.render(
   <ThirdwebProvider
     activeChain="mumbai"
