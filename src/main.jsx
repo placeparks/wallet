@@ -15,8 +15,8 @@ import "./styles/globals.css";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
-const clientId = process.env.CLIENT_ID;
-const paperClientId = process.env.PAPER_CLIENT_ID;
+const clientId = import.meta.env.VITE_CLIENT_ID;
+const paperId = import.meta.env.VITE_PAPER_CLIENT_ID;
 root.render(
   <ThirdwebProvider
     activeChain="mumbai"
@@ -36,7 +36,7 @@ root.render(
         }),
         localWallet(),
         paperWallet({
-          paperClientId: paperClientId,
+          paperClientId: paperId,
         }),
       ]}
 
